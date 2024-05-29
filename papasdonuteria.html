@@ -1,26 +1,10 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset='utf8'>
-    </head>
-    <body>
-        <div id='ruffle'></div>
-        <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-        <script>
-var swfobject = {};
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 
-swfobject.embedSWF = function(url, cont, width, height){
-    var ruffle = window.RufflePlayer.newest(),
-        player = Object.assign(document.getElementById(cont).appendChild(ruffle.createPlayer()), {
-            width: 100%,
-            height: 100%,
-            style: 'width:' + width + 'px; height: ' + height + 'px',
-        });
-    
-    player.load({ url: url });
-}
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<embed height="100%" pluginspage=" http://www.macromedia.com/go/getflashplayer" src="https://unblockeria.github.io/pizzeria/papasbakeria.swf" type="application/x-shockwave-flash" width="100%"></embed></div>
 
-swfobject.embedSWF('https://unblockeria.github.io/pizzeria/papasdonuteria.swf', 'ruffle', 800, 800);
         </script>
     </body>
 </html>
