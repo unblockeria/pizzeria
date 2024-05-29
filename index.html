@@ -1,26 +1,32 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset='utf8'>
-    </head>
-    <body>
-        <div id='ruffle'></div>
-        <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-        <script>
-var swfobject = {};
-
-swfobject.embedSWF = function(url, cont, width, height){
-    var ruffle = window.RufflePlayer.newest(),
-        player = Object.assign(document.getElementById(cont).appendChild(ruffle.createPlayer()), {
-            width: width,
-            height: height,
-            style: 'width: ' + width + 'px; height: ' + height + 'px',
-        });
+    <head> <meta charset='utf8'> </head>
     
-    player.load({ url: url });
-}
-
-swfobject.embedSWF('https://unblockeria.github.io/pizzeria/papasdonuteria.swf', 'ruffle', 500, 500);
-        </script>
+    <body>
+    
+        <script src="https://flash-games.penguinbotcoder.repl.co/ruffle/ruffle.js"></script>
+    
+        <div id='ruffle'></div>
+        
+        <p>This is a test page for Adobe Flash content</p>
+        
     </body>
+    
+    <script>
+    
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("DOMContentLoaded", start_Ruffle, false );
+        
+        function start_Ruffle()
+        {
+            let ruffle = window.RufflePlayer.newest();
+            let player = ruffle.createPlayer();
+            let container = document.getElementById("ruffle");
+            container.appendChild(player);
+            player.load("https://flash-games.penguinbotcoder.repl.co/flashgames/thinice.swf");
+            
+        }
+        
+    </script>
+
 </html>
