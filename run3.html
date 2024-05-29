@@ -10,40 +10,14 @@
             height: 100%;
             overflow: hidden;
         }
-        #content {
-            width: 100%;
-            height: 100%;
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
         }
     </style>
 </head>
 <body>
-    <div id='content'></div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var content = document.getElementById('content');
-            var iframe = document.createElement('iframe');
-            iframe.src = 'https://lekug.github.io/tn6pS9dCf37xAhkJv/';
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-            iframe.style.border = 'none';
-            content.appendChild(iframe);
-
-            // Function to request fullscreen
-            function requestFullscreen(element) {
-                if (element.requestFullscreen) {
-                    element.requestFullscreen();
-                } else if (element.mozRequestFullScreen) {
-                    element.mozRequestFullScreen();
-                } else if (element.webkitRequestFullscreen) {
-                    element.webkitRequestFullscreen();
-                } else if (element.msRequestFullscreen) {
-                    element.msRequestFullscreen();
-                }
-            }
-
-            // Request fullscreen when the page loads
-            requestFullscreen(content);
-        });
-    </script>
+    <iframe src="https://lekug.github.io/tn6pS9dCf37xAhkJv/"></iframe>
 </body>
 </html>
